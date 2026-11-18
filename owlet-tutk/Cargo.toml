@@ -1,0 +1,11 @@
+[package]
+name = "owlet-tutk"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+dtls = ["dep:openssl"]
+
+[dependencies]
+openssl = { version = "0.10", optional = true }

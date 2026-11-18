@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owlet RTSP</title>
+  <link rel="stylesheet" href="/static/app.css?v=3" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='9' fill='%235eead4'/></svg>" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Owlet<span class="dim">RTSP</span></span>
+    </div>
+    <div class="topbar-status" id="media-status">
+      <span class="dot dot-idle"></span><span class="text">connecting…</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" id="btn-sync" title="Re-read devices from the cloud">Sync</button>
+      <span class="account" id="account"></span>
+      <form action="/logout" method="post"><button class="btn btn-ghost">Sign out</button></form>
+      <button class="btn btn-ghost" id="unlink" type="button">Unlink account</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="detail err" id="sync-error" role="alert" hidden></p>
+    <section class="grid" id="grid" aria-label="Cameras"></section>
+    <section class="empty" id="empty" hidden>
+      <h2>No cameras found</h2>
+      <p>Select Sync to check the linked Owlet account.</p>
+    </section>
+  </main>
+  <dialog id="editor" class="dialog">
+    <form id="editor-form">
+      <h2>Edit camera</h2>
+      <input type="hidden" id="f-id" />
+      <label>Name<input id="f-name" required /></label>
+      <label>Camera LAN IP<input id="f-lan-ip" placeholder="192.0.2.10" /></label>
+      <label>LAN port (leave blank for automatic search)
+        <input id="f-lan-port" type="number" min="1" max="65535" />
+      </label>
+      <label class="check"><input type="checkbox" id="f-enabled" /> Publish this camera</label>
+      <menu>
+        <button class="btn btn-danger" type="button" id="delete">Delete</button>
+        <button class="btn btn-ghost" type="button" id="editor-cancel">Cancel</button>
+        <button class="btn" type="submit">Save</button>
+      </menu>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="/static/app.js?v=3"></script>
+</body>
+</html>

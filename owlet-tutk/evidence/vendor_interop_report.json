@@ -1,0 +1,15 @@
+{
+  "vendor_library": "4.3.8.0-0-gfd8c136-R1_openssl_android",
+  "lan_search_found": "1",
+  "connect_result": "0",
+  "session_mode": "LAN",
+  "av_client_start": "0",
+  "source_bytes": 312561,
+  "received_bytes": 1311128,
+  "full_loops": 4,
+  "source_sha256": "fd8860c13fa4d98adf5894a8eb7b8f57bbbc4860b41b32ef3f46e94ac2901211",
+  "first_loop_sha256": "fd8860c13fa4d98adf5894a8eb7b8f57bbbc4860b41b32ef3f46e94ac2901211",
+  "received_equals_source_repeated": true,
+  "wrong_password_av_client_start": "-20015",
+  "pass": true
+}

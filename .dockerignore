@@ -1,0 +1,14 @@
+**
+!Dockerfile
+!owlet-tutk/
+!owlet-tutk/Cargo.toml
+!owlet-tutk/Cargo.lock
+!owlet-tutk/src/
+!owlet-tutk/src/**
+!owlet-rtsp/
+!owlet-rtsp/requirements.txt
+!owlet-rtsp/app/
+!owlet-rtsp/app/**
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
